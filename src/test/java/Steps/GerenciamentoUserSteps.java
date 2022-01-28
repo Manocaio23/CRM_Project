@@ -1,5 +1,7 @@
 package Steps;
 
+import java.util.Locale;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
@@ -21,10 +23,11 @@ import io.cucumber.java.pt.Quando;
 
 
 public class GerenciamentoUserSteps {
+	Faker faker = new Faker(new Locale("pt_BR"));
 	private WebDriver driver;
 	//private String fake;
 	private String nome;
-	Faker fake= new Faker();
+
 	
 	
 	@Before
@@ -110,31 +113,36 @@ public class GerenciamentoUserSteps {
 	@E("nome de usuario")
 	public void nome_de_usuario() {
 		
-		driver.findElement(By.id("systemUser_userName")).sendKeys("Thommas Shelby");
+		String nome= faker.name().fullName();
+		driver.findElement(By.id("systemUser_userName")).sendKeys(nome);
 	}
 
 	@E("situacao {string}")
 	public void situacao(String string) {
-
+		//assert equals
 	}
 
 	@E("senha {string}")
 	public void senha(String string) {
-
+		driver.findElement(By.id("systemUser_password")).sendKeys(string);
+		
 	}
 
 	@E("repetir a senha {string}")
 	public void repetir_a_senha(String string) {
-
+		driver.findElement(By.id("systemUser_confirmPassword")).sendKeys(string);
+		
 	}
 
 	@E("clico no botao save")
-	public void clico_no_botao_save() {
-
+	public void clico_no_botao_save() throws InterruptedException {
+		driver.findElement(By.id("btnSave")).click();
+		Thread.sleep(3000);
 	}
 
 	@Entao("devo ver a mensagem que sucesso")
 	public void devo_ver_a_mensagem_que_sucesso() {
-
+		//assert equals
+		
 	}
 }
