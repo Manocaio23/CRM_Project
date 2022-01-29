@@ -1,7 +1,7 @@
 package Steps;
 
 import java.util.Locale;
-
+import static Driver.DriverFactory.pegaDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.github.javafaker.Faker;
 
+import Steps.base.Hooks;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.pt.Dado;
@@ -22,27 +23,11 @@ import io.cucumber.java.pt.Quando;
 
 
 
-public class GerenciamentoUserSteps {
+public class GerenciamentoUserSteps  {
 	Faker faker = new Faker(new Locale("pt_BR"));
-	private WebDriver driver;
-	//private String fake;
-	private String nome;
-
+	private WebDriver driver=pegaDriver();
 	
 	
-	@Before
-	public void setup() {
-		System.setProperty("webdriver.chrome.driver", "chromedriver/chromedriver.exe");
-		ChromeOptions chormeoptions = new ChromeOptions();
-		chormeoptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-		driver= new ChromeDriver(chormeoptions);
-		driver.manage().window().maximize();
-	}
-	
-	@After
-	public void tearDown() {
-		//driver.quit();
-	}
 
 	@Dado("que esteja no Orage")
 	public void que_esteja_no_orage() {

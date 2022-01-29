@@ -1,10 +1,14 @@
 #language: pt
-
+#Autor: Caio Augusto
+#Data: Dezembro/2022
 @gerenciamento @regressao
 
 
 Funcionalidade: Geranciamento de usuarios CRUD
 
+Como Administrador quero gerenciar todos usuarios do sistema
+Para assim poder maniputar quando quiser
+Alterar, deletar, inserir e ler informaçoes
 
 Contexto: 
 Dado que esteja no Orage
@@ -28,6 +32,7 @@ E senha "caioaugusto23@P"
 E repetir a senha "caioaugusto23@P"
 Quando clico no botao save
 Entao devo ver a mensagem que sucesso
+
 
 
 
