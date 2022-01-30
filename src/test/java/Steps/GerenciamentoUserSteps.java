@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.github.javafaker.Faker;
 
+import PageObjects.Base_PO;
 import Steps.base.Hooks;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -23,7 +24,7 @@ import io.cucumber.java.pt.Quando;
 
 
 
-public class GerenciamentoUserSteps  {
+public class GerenciamentoUserSteps extends Base_PO {
 	Faker faker = new Faker(new Locale("pt_BR"));
 	
 	private WebDriver driver=pegaDriver();
@@ -32,30 +33,35 @@ public class GerenciamentoUserSteps  {
 
 	@Dado("que esteja no Orage")
 	public void que_esteja_no_orage() {
-		driver.get("https://opensource-demo.orangehrmlive.com/index.php/dashboard");
+		NavegarUrl("https://opensource-demo.orangehrmlive.com/index.php/dashboard");
+		
 	}
 
 	@Quando("escrevo o Login {string}")
 	public void escrevo_o_login(String string) {
-		driver.findElement(By.id("txtUsername")).sendKeys(string);
+		//driver.findElement(By.id("txtUsername")).sendKeys(string);
+		sendKeys(By.id("txtUsername"), string);
+		
 	}
 
 	@Quando("a {string}")
 	public void a(String string) {
-		driver.findElement(By.id("txtPassword")).sendKeys(string);
-		
+		//driver.findElement(By.id("txtPassword")).sendKeys(string);
+		sendKeys(By.id("txtPassword"), string);
 		
 	}
 
 	@E("clico no botao login")
 	public void clico_no_botao_login() {
-		driver.findElement(By.id("btnLogin")).click();
+		//driver.findElement(By.id("btnLogin")).click();
+		EsperaOElementoCarregarClicar(By.id("btnLogin"));
    
 	}
 
 	@E("visualizo {string}")
 	public void visualizo(String string) throws InterruptedException {
 		driver.findElement(By.xpath("//*[@id=\"menu_admin_viewAdminModule\"]/b")).click();
+		
 		//WebElement element =
 		//		Actions action = new Actions(driver);
 //		action.moveToElement(element).perform();

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-01-29T21:53:01 BRT" name="Default suite" finished-at="2022-01-29T21:53:08 BRT" duration-ms="6843">
+  <suite started-at="2022-01-30T14:06:14 BRT" name="Default suite" finished-at="2022-01-30T14:06:35 BRT" duration-ms="20455">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RunnerClass@3f6b0be5]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-01-29T21:53:01 BRT" name="Default test" finished-at="2022-01-29T21:53:08 BRT" duration-ms="6843">
+    <test started-at="2022-01-30T14:06:14 BRT" name="Default test" finished-at="2022-01-30T14:06:35 BRT" duration-ms="20455">
       <class name="Runner.RunnerClass">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.RunnerClass@3f6b0be5]" started-at="2022-01-29T21:53:01 BRT" name="setUpClass" finished-at="2022-01-29T21:53:01 BRT" duration-ms="432" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.RunnerClass@3f6b0be5]" started-at="2022-01-30T14:06:14 BRT" name="setUpClass" finished-at="2022-01-30T14:06:16 BRT" duration-ms="1346" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3174cb09]]>
+                <![CDATA[org.testng.TestRunner@263f04ca]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RunnerClass@3f6b0be5]" started-at="2022-01-29T21:53:01 BRT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-01-29T21:53:07 BRT" duration-ms="6288" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RunnerClass@3f6b0be5]" started-at="2022-01-30T14:06:16 BRT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-01-30T14:06:35 BRT" duration-ms="18866" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,51 +34,10 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#txtUsername555"}
-  (Session info: chrome=97.0.4692.99)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'CPX-BGL07PNBN0D', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\CAIO~1.CAV\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:51117}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52533648338d113d964896aefa57175c
-*** Element info: {Using=id, value=txtUsername555}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#txtUsername555"}
-  (Session info: chrome=97.0.4692.99)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'CPX-BGL07PNBN0D', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\CAIO~1.CAV\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:51117}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52533648338d113d964896aefa57175c
-*** Element info: {Using=id, value=txtUsername555}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-at org.openqa.selenium.By$ById.findElement(By.java:188)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at Steps.GerenciamentoUserSteps.escrevo_o_login(GerenciamentoUserSteps.java:40)
-at ✽.escrevo o Login "Admin"(classpath:features/gerenciamento_usuario.feature:15)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.RunnerClass@3f6b0be5]" started-at="2022-01-29T21:53:07 BRT" name="tearDownClass" finished-at="2022-01-29T21:53:08 BRT" duration-ms="75" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.RunnerClass@3f6b0be5]" started-at="2022-01-30T14:06:35 BRT" name="tearDownClass" finished-at="2022-01-30T14:06:35 BRT" duration-ms="134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
