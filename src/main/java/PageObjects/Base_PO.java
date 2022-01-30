@@ -3,8 +3,11 @@ package PageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import Driver.DriverFactory;
 
 import static Driver.DriverFactory.pegaDriver;
 
@@ -13,7 +16,7 @@ import java.time.Duration;
 public class Base_PO {
 	
 	public Base_PO() {
-		
+		PageFactory.initElements(pegaDriver(), this);
 	}
 	
 	public WebDriver pegaDriver(){
