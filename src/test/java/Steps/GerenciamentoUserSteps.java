@@ -25,6 +25,7 @@ import io.cucumber.java.pt.Quando;
 
 public class GerenciamentoUserSteps  {
 	Faker faker = new Faker(new Locale("pt_BR"));
+	
 	private WebDriver driver=pegaDriver();
 	
 	
