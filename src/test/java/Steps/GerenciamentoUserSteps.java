@@ -33,6 +33,7 @@ public class GerenciamentoUserSteps extends Base_PO {
 	public GerenciamentoUserSteps(GerenciamentoUser_PO gerenciadorUser) {
 		this.gerenciadorUser=gerenciadorUser;
 	}
+	
 	private WebDriver driver=pegaDriver();
 	
 	
@@ -115,7 +116,8 @@ public class GerenciamentoUserSteps extends Base_PO {
 	public void nome_de_usuario() {
 		
 		String nome= faker.name().fullName();
-		driver.findElement(By.id("systemUser_userName")).sendKeys(nome);
+		//driver.findElement(By.id("systemUser_userName")).sendKeys(nome);
+		gerenciadorUser.setEspecificoUsuario(nome);
 	}
 
 	@E("situacao {string}")
@@ -125,19 +127,20 @@ public class GerenciamentoUserSteps extends Base_PO {
 
 	@E("senha {string}")
 	public void senha(String string) {
-		driver.findElement(By.id("systemUser_password")).sendKeys(string);
-		
+		//driver.findElement(By.id("systemUser_password")).sendKeys(string);
+		gerenciadorUser.setEspecificoSenha(string);
 	}
 
 	@E("repetir a senha {string}")
 	public void repetir_a_senha(String string) {
-		driver.findElement(By.id("systemUser_confirmPassword")).sendKeys(string);
-		
+		//driver.findElement(By.id("systemUser_confirmPassword")).sendKeys(string);
+		gerenciadorUser.setEspecificoSenhaRepertir(string);
 	}
 
 	@E("clico no botao save")
 	public void clico_no_botao_save() throws InterruptedException {
-		driver.findElement(By.id("btnSave")).click();
+		//driver.findElement(By.id("btnSave")).click();
+		gerenciadorUser.setBtnSave();
 		Thread.sleep(3000);
 	}
 

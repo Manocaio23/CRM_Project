@@ -28,8 +28,8 @@ E seleciono a funcao "Admin"
 E seleciono o funcionario "Mano Caio"
 E nome de usuario 
 E situacao "Enabled"
-E senha "caioaugusto23@P"
-E repetir a senha "caioaugusto23@P"
+E senha "uZZJMWTt7VpjnvEcBdf%F*"
+E repetir a senha "uZZJMWTt7VpjnvEcBdf%F*"
 Quando clico no botao save
 Entao devo ver a mensagem que sucesso
 
